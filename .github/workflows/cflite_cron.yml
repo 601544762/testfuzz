@@ -22,6 +22,7 @@ jobs:
         mode: 'coverage'
         storage-repo: https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/601544762/testfuzz.git
         storage-repo-branch: main   # Optional. Defaults to "main"
+        storage-repo-branch-coverage: gh-pages
   Pruning:
     runs-on: ubuntu-latest
     steps:
