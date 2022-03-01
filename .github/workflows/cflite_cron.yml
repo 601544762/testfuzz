@@ -20,7 +20,8 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         fuzz-seconds: 600
         mode: 'coverage'
-        storage-repo: https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/601544762/testfuzz.git
+        #storage-repo: https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/601544762/testfuzz.git
+        storage-repo: git@github.com:601544762/testfuzz.git
         storage-repo-branch: main   # Optional. Defaults to "main"
         storage-repo-branch-coverage: gh-pages
   Pruning:
@@ -36,6 +37,7 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         fuzz-seconds: 1800
         mode: 'prune'
-        storage-repo: https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/601544762/testfuzz.git
+        #storage-repo: https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/601544762/testfuzz.git
+        storage-repo: git@github.com:601544762/testfuzz.git
         storage-repo-branch: main   # Optional. Defaults to "main"
         storage-repo-branch-coverage: gh-pages
