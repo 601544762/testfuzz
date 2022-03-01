@@ -1,6 +1,6 @@
 homepage: "https://curl.haxx.se/"
 language: c++
-primary_contact: "601544762"
+primary_contact: "zolddouzi"
 auto_ccs:
   - "601544762@qq.com"
 sanitizers:
