@@ -10,4 +10,4 @@ sanitizers:
 architectures:
   - x86_64
   - i386
-main_repo: 'https://github.com/601544762/testfuzz.git'
+main_repo: 'git@github.com:601544762/testfuzz.git'
