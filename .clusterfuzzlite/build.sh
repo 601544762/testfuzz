@@ -18,8 +18,10 @@
 # Run the OSS-Fuzz script in the curl-fuzzer project.
 #cat ossfuzz.sh
 #ls -al ./
-ls -al ./scripts/
-cat ./scripts/install_curl.sh
-chmod 777 buildconf
+#ls -al ./scripts/
+#cat ./scripts/install_curl.sh
+
+chmod +x ./buildconf
+ls -al ./
 
 ./ossfuzz.sh
