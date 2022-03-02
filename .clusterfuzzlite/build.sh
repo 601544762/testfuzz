@@ -21,7 +21,7 @@
 #ls -al ./scripts/
 #cat ./scripts/install_curl.sh
 
-chmod +x ./buildconf
+chmod 777 ./buildconf
 ls -al ./
 
 ./ossfuzz.sh
