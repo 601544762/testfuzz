@@ -22,7 +22,9 @@
 #cat ./scripts/install_curl.sh
 
 chmod 777 ./buildconf
-cat ./buildconf
+#cat ./buildconf
+sed -i 's/.\/buildconf/sh buildconf/g' ./scripts/install_curl.sh
+cat ./scripts/install_curl.sh
 ls -al ./
 
 ./ossfuzz.sh
