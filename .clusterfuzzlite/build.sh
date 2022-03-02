@@ -17,6 +17,8 @@
 
 # Run the OSS-Fuzz script in the curl-fuzzer project.
 #cat ossfuzz.sh
-ls -al ./
-#cat /src/curl_install/install_curl.sh
+#ls -al ./
+ls -al ./scripts/
+cat ./scripts/install_curl.sh
+
 ./ossfuzz.sh
