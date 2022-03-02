@@ -21,6 +21,7 @@
 #ls -al ./scripts/
 #cat ./scripts/install_curl.sh
 #cat ./buildconf
+cat ./scripts/compile_fuzzer.sh
 
 sed -i 's/.\/buildconf/sh buildconf/g' ./scripts/install_curl.sh
 
