@@ -20,11 +20,16 @@
 #ls -al ./
 #ls -al ./scripts/
 #cat ./scripts/install_curl.sh
+#cat ./buildconf
+
+sed -i 's/.\/buildconf/sh buildconf/g' ./scripts/install_curl.sh
+
+echo '#!/bin/sh
+echo "*** Do not use buildconf. Instead, just use: autoreconf -fi" >&2
+exec ${AUTORECONF:-autoreconf} -fi "${@}"'> buildconf
+
 
 chmod 777 ./buildconf
-#cat ./buildconf
-sed -i 's/.\/buildconf/sh buildconf/g' ./scripts/install_curl.sh
-cat ./scripts/install_curl.sh
 ls -al ./
 
 ./ossfuzz.sh
