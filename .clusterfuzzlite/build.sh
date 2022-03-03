@@ -18,18 +18,21 @@
 # Run the OSS-Fuzz script in the curl-fuzzer project.
 
 sed -i 's/.\/buildconf/sh buildconf/g' ./scripts/install_curl.sh
-#sed -i '55a \            --with-amissl \\' ./scripts/install_curl.sh
-#sed -i '55a \            --with-bearssl \\' ./scripts/install_curl.sh
-#sed -i '55a \            --with-gnutls \\' ./scripts/install_curl.sh
-#sed -i '55a \            --with-mbedtls \\' ./scripts/install_curl.sh
-#sed -i '55a \            --with-nss \\' ./scripts/install_curl.sh
-#sed -i '55a \            --with-openssl \\' ./scripts/install_curl.sh
-#sed -i '55a \            --with-schannel \\' ./scripts/install_curl.sh
-#sed -i '55a \            --with-secure-transport \\' ./scripts/install_curl.sh
-#sed -i '55a \            --with-wolfssl \\' ./scripts/install_curl.sh
-#sed -i '55a \            --with-nss-deprecated \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-amissl \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-bearssl \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-gnutls \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-mbedtls \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-nss \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-openssl \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-schannel \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-secure-transport \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-wolfssl \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-nss-deprecated \\' ./scripts/install_curl.sh
 
-cp /src/curl/curl.1 /src/curl/docs/
+#cp /src/curl/curl.1 /src/curl/docs/
+cp /github/workspace/storage/testfuzz/curl.1 /src/curl/docs/
+md5sum /src/curl/curl.1
+md5sum /github/workspace/storage/testfuzz/curl.1
 
 #echo '#!/bin/sh
 #echo "*** Do not use buildconf. Instead, just use: autoreconf -fi" >&2
@@ -37,7 +40,5 @@ cp /src/curl/curl.1 /src/curl/docs/
 
 chmod 777 ./buildconf
 ls -al /src/curl/docs
-ls -al /opt
-find / -name 'curl.1'
 
 ./ossfuzz.sh
