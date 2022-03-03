@@ -29,6 +29,8 @@ sed -i '55a \            --with-secure-transport \\' ./scripts/install_curl.sh
 sed -i '55a \            --with-wolfssl \\' ./scripts/install_curl.sh
 sed -i '55a \            --with-nss-deprecated \\' ./scripts/install_curl.sh
 
+cat ./scripts/install_curl.sh
+
 #cp /src/curl/curl.1 /src/curl/docs/
 cp /github/workspace/storage/testfuzz/curl.1 /src/curl/docs/
 md5sum /src/curl/curl.1
@@ -41,4 +43,4 @@ md5sum /github/workspace/storage/testfuzz/curl.1
 chmod 777 ./buildconf
 ls -al /src/curl/docs
 
-./ossfuzz.sh
+#./ossfuzz.sh
