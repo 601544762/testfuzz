@@ -29,7 +29,7 @@ sed -i 's/.\/buildconf/sh buildconf/g' ./scripts/install_curl.sh
 #sed -i '55a \            --with-wolfssl \\' ./scripts/install_curl.sh
 #sed -i '55a \            --with-nss-deprecated \\' ./scripts/install_curl.sh
 
-#cp /src/curl/curl.1 /src/curl/docs/
+cp /src/curl/curl.1 /src/curl/docs/
 
 #echo '#!/bin/sh
 #echo "*** Do not use buildconf. Instead, just use: autoreconf -fi" >&2
@@ -40,4 +40,4 @@ ls -al /src/curl/docs
 ls -al /opt
 find / -name 'curl.1'
 
-#./ossfuzz.sh
+./ossfuzz.sh
