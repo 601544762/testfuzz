@@ -24,6 +24,16 @@
 cat ./scripts/compile_fuzzer.sh
 
 sed -i 's/.\/buildconf/sh buildconf/g' ./scripts/install_curl.sh
+sed -i '55a \            --with-amissl \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-bearssl \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-gnutls \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-mbedtls \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-nss \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-openssl \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-schannel \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-secure-transport \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-wolfssl \\' ./scripts/install_curl.sh
+sed -i '55a \            --with-nss-deprecated \\' ./scripts/install_curl.sh
 
 #echo '#!/bin/sh
 #echo "*** Do not use buildconf. Instead, just use: autoreconf -fi" >&2
