@@ -31,6 +31,6 @@ sed -i 's/.\/buildconf/sh buildconf/g' ./scripts/install_curl.sh
 
 
 chmod 777 ./buildconf
-ls -al /src
+ls -al /src/curl/docs
 
 ./ossfuzz.sh
