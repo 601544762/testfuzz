@@ -46,4 +46,4 @@ md5sum /github/workspace/storage/testfuzz/curl.1
 chmod 777 ./buildconf
 ls -al /src/curl/docs
 
-#./ossfuzz.sh
+./ossfuzz.sh
