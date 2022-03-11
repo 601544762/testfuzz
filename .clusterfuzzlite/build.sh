@@ -17,7 +17,7 @@
 
 # Run the OSS-Fuzz script in the curl-fuzzer project.
 
-#sed -i 's/.\/buildconf/sh buildconf/g' ./scripts/install_curl.sh
+sed -i 's/.\/buildconf/sh buildconf/g' ./scripts/install_curl.sh
 #sed -i '55a \            --with-amissl \\' ./scripts/install_curl.sh
 #sed -i '55a \            --with-bearssl \\' ./scripts/install_curl.sh
 #sed -i '55a \            --with-gnutls \\' ./scripts/install_curl.sh
