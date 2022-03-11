@@ -17,22 +17,25 @@
 
 # Run the OSS-Fuzz script in the curl-fuzzer project.
 
-sed -i 's/.\/buildconf/sh buildconf/g' ./scripts/install_curl.sh
-sed -i '55a \            --with-amissl \\' ./scripts/install_curl.sh
-sed -i '55a \            --with-bearssl \\' ./scripts/install_curl.sh
-sed -i '55a \            --with-gnutls \\' ./scripts/install_curl.sh
-sed -i '55a \            --with-mbedtls \\' ./scripts/install_curl.sh
-sed -i '55a \            --with-nss \\' ./scripts/install_curl.sh
-sed -i '55a \            --with-openssl \\' ./scripts/install_curl.sh
-sed -i '55a \            --with-schannel \\' ./scripts/install_curl.sh
-sed -i '55a \            --with-secure-transport \\' ./scripts/install_curl.sh
-sed -i '55a \            --with-wolfssl \\' ./scripts/install_curl.sh
-sed -i '55a \            --with-nss-deprecated \\' ./scripts/install_curl.sh
+#sed -i 's/.\/buildconf/sh buildconf/g' ./scripts/install_curl.sh
+#sed -i '55a \            --with-amissl \\' ./scripts/install_curl.sh
+#sed -i '55a \            --with-bearssl \\' ./scripts/install_curl.sh
+#sed -i '55a \            --with-gnutls \\' ./scripts/install_curl.sh
+#sed -i '55a \            --with-mbedtls \\' ./scripts/install_curl.sh
+#sed -i '55a \            --with-nss \\' ./scripts/install_curl.sh
+#sed -i '55a \            --with-openssl \\' ./scripts/install_curl.sh
+#sed -i '55a \            --with-schannel \\' ./scripts/install_curl.sh
+#sed -i '55a \            --with-secure-transport \\' ./scripts/install_curl.sh
+#sed -i '55a \            --with-wolfssl \\' ./scripts/install_curl.sh
+#sed -i '55a \            --with-nss-deprecated \\' ./scripts/install_curl.sh
 
 cat ./scripts/install_curl.sh
 
 #cp /src/curl/curl.1 /src/curl/docs/
 cp /github/workspace/storage/testfuzz/curl.1 /src/curl/docs/
+mkdir -p /tmp/dependency
+tar -xvf /github/workspace/storage/testfuzz/cmdline-opts.tar -C /tmp/dependency
+cp /tmp/dependency/docs/cmdline-opts/*.d /src/curl/docs/cmdline-opts
 md5sum /src/curl/curl.1
 md5sum /github/workspace/storage/testfuzz/curl.1
 
